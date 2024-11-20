@@ -49,6 +49,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'python_vercel_task.urls'
@@ -125,7 +126,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / "static"]
 
 STATIC_ROOT = BASE_DIR / "staticfiles"  # Donde se recopilan todos los archivos estáticos al ejecutar collectstatic
-STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"  # Almacenamiento estándar
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage" # Almacenamiento estándar
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
