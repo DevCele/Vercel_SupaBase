@@ -39,7 +39,6 @@ pip-log.txt
 *.egg-info/
 
 # Archivos estáticos generados
-staticfiles/
 media/
 
 # Ignorar archivos temporales
