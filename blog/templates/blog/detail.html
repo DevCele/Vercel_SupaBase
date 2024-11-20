@@ -1,23 +1,34 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 
-  <head>
+<head>
     <meta charset="utf-8">
-    <title>Blog App</title>
-  </head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'blog/styles.css' %}">
+    <title>Blog Detail</title>
+</head>
 
-  <body>
-    <p>
-      <strong>Title:</strong>
-      {{article.title}}
-    </p>
+<body>
+    <header>
+        <h1>Blog Detail</h1>
+    </header>
 
-    <p>
-      <strong>Content:</strong>
-      {{article.content}}
-    </p>
-    <a href="{% url 'index' %}">Back</a> |
-    <a href="{% url 'edit' article.id %}">Edit</a>
-  </body>
+    <main>
+        <div class="blog-details">
+            <p><strong>Title:</strong> {{ article.title }}</p>
+            <p><strong>Content:</strong> {{ article.content }}</p>
+        </div>
+
+        <div class="action-links">
+            <a href="{% url 'index' %}">Back</a> |
+            <a href="{% url 'edit' article.id %}">Edit</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>Blog App &copy; 2024</p>
+    </footer>
+</body>
 
 </html>

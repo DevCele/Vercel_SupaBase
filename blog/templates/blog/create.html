@@ -1,22 +1,32 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 
-    <head>
-        <meta charset="utf-8">
-        <title>Blog App</title>
-    </head>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Blog - Blog App</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'blog/styles.css' %}">
+</head>
 
-    <body>
-        <h1>New Blog</h1>
+<body>
+    <header>
+        <h1>Create a New Blog</h1>
+    </header>
+
+    <main>
+        <!-- Formulario para crear un nuevo blog -->
         <form action="{% url 'create' %}" method="post">
             {% csrf_token %}
             {{ form.as_p }}
-            <input type="submit" value="Create Blog">
+            <button type="submit">Create Blog</button>
         </form>
 
-        <br>
-
-        <a href="{% url 'index' %}">Back</a>
-    </body>
+        <!-- Enlace para regresar al índice -->
+        <div>
+            <a href="{% url 'index' %}">Back</a>
+        </div>
+    </main>
+</body>
 
 </html>

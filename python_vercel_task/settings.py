@@ -122,6 +122,14 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+# Directorios donde Django buscará archivos estáticos en desarrollo
+STATICFILES_DIRS = [
+    BASE_DIR / 'static',  # Apunta a la carpeta "static" junto a manage.py
+]
+
+# Directorio donde se recolectarán los archivos estáticos para producción (opcional)
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
