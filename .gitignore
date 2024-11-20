@@ -9,16 +9,29 @@ env/
 Thumbs.db
 
 # Archivos de configuración del editor
-*.vscode/
+.vscode/
+.idea/
 
 # Archivos de compilación
 *.pyc
 *.pyo
 __pycache__/
 
-# Archivos y carpetas de migraciones
+# Cachés de tests
+.pytest_cache/
+coverage/
+htmlcov/
+
+# Archivos y carpetas de migraciones (opcional)
+**/migrations/
+
+# Archivos de base de datos locales
 db.sqlite3
+
+# Archivos de log
 *.log
+
+# Archivos de traducción temporales
 *.pot
 
 # Archivos de dependencia
@@ -31,3 +44,6 @@ media/
 
 # Ignorar archivos temporales
 *.tmp
+
+# Node.js (npm/yarn)
+node_modules/
