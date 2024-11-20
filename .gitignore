@@ -38,9 +38,6 @@ db.sqlite3
 pip-log.txt
 *.egg-info/
 
-# Archivos estáticos generados
-media/
-
 # Ignorar archivos temporales
 *.tmp
 
