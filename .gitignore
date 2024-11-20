@@ -1,0 +1,33 @@
+# Ignorar el entorno virtual
+env/
+
+# Ignorar archivos de entorno
+.env
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos de configuración del editor
+*.vscode/
+
+# Archivos de compilación
+*.pyc
+*.pyo
+__pycache__/
+
+# Archivos y carpetas de migraciones
+db.sqlite3
+*.log
+*.pot
+
+# Archivos de dependencia
+pip-log.txt
+*.egg-info/
+
+# Archivos estáticos generados
+staticfiles/
+media/
+
+# Ignorar archivos temporales
+*.tmp
