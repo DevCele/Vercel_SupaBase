@@ -7,6 +7,5 @@ def home(request):
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('blog/', include('blog.urls')),
-    path('', home),  # Ruta para la raíz
+    path('', include('blog.urls')),
 ]
